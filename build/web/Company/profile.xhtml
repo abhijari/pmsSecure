@@ -1,0 +1,569 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+
+        <title>:: Lucid HR :: Profile</title>
+
+        <meta charset="utf-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <meta name="description" content="Lucid Bootstrap 4x Admin Template" />
+
+        <meta name="author" content="WrapTheme, design by: ThemeMakker.com" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- VENDOR CSS -->
+        <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../assets/vendor/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <link rel="stylesheet" href="../assets/css/blog.css" />
+        <link rel="stylesheet" href="../assets/css/color_skins.css" />
+        <link rel="stylesheet" href="../assets/css/avtar.css" />
+        <link rel="stylesheet" href="../assets/vendor/dropify/css/dropify.min.css" />
+        <link rel="stylesheet" href="../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
+        <style>
+            #removebtn {
+                position: absolute;
+                top: -10px;
+                right: 0px;
+            }
+            #removebtn1 {
+                position: absolute;
+                top: -10px;
+                right: 0px;
+            }
+            #removebtn2 {
+                position: absolute;
+                top: -10px;
+                right: 0px;
+            }
+        </style>
+    </head>
+
+    <body class="theme-orange">
+        <!-- Page Loader -->
+
+        <div class="page-loader-wrapper">
+
+            <div class="loader">
+
+                <div class="m-t-30"><img src="https://wrraptheme.com/templates/lucid/hr/html/assets/images/logo-icon.svg" width="48" height="48" alt="Lucid" /></div>
+
+                <p>Please wait...</p>
+            </div>
+        </div>
+        <!-- Overlay For Sidebars -->
+
+        <div id="wrapper">
+            <nav class="navbar navbar-fixed-top">
+
+                <div class="container-fluid">
+
+                    <div class="navbar-btn">
+                        <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars" /></button>
+                    </div>
+
+                    <div class="navbar-brand">
+                        <a href="index.html"><img src="https://wrraptheme.com/templates/lucid/hr/html/assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo" /></a>
+                    </div>
+
+                    <div class="navbar-right">
+
+                        <div id="navbar-menu">
+
+                            <ul class="nav navbar-nav">
+
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                        <i class="icon-bell" />
+                                        <span class="notification-dot" />
+                                    </a>
+
+                                    <ul class="dropdown-menu notifications animated shake">
+
+                                        <li class="header"><strong>You have 4 new Notifications</strong></li>
+
+                                        <li>
+                                            <a href="javascript:void(0);">
+
+                                                <div class="media">
+
+                                                    <div class="media-left">
+                                                        <i class="icon-info text-warning" />
+                                                    </div>
+
+                                                    <div class="media-body">
+
+                                                        <p class="text">Campaign <strong>Holiday Sale</strong> is nearly
+                                                            reach budget limit.</p>
+                                                        <span class="timestamp">10:00 AM Today</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0);">
+
+                                                <div class="media">
+
+                                                    <div class="media-left">
+                                                        <i class="icon-like text-success" />
+                                                    </div>
+
+                                                    <div class="media-body">
+
+                                                        <p class="text">Your New Campaign <strong>Holiday Sale</strong> is
+                                                            approved.</p>
+                                                        <span class="timestamp">11:30 AM Today</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0);">
+
+                                                <div class="media">
+
+                                                    <div class="media-left">
+                                                        <i class="icon-pie-chart text-info" />
+                                                    </div>
+
+                                                    <div class="media-body">
+
+                                                        <p class="text">Website visits from Twitter is 27% higher than last
+                                                            week.</p>
+                                                        <span class="timestamp">04:00 PM Today</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0);">
+
+                                                <div class="media">
+
+                                                    <div class="media-left">
+                                                        <i class="icon-info text-danger" />
+                                                    </div>
+
+                                                    <div class="media-body">
+
+                                                        <p class="text">Error on website analytics configurations</p>
+                                                        <span class="timestamp">Yesterday</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="page-login.html" class="icon-menu"><i class="icon-login" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="left-sidebar" class="sidebar">
+
+                <div class="sidebar-scroll">
+
+                    <div class="user-account">
+                        <img src="../assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture" />
+
+                        <div class="dropdown">
+                            <span>Welcome,</span>
+                            <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>COMPANY PANEL</strong></a>
+
+                            <ul class="dropdown-menu dropdown-menu-right account animated flipInY">
+
+                                <li><a href="page-profile2.html"><i class="icon-user" />My Profile</a></li>
+
+                                <li><a href="app-inbox.html"><i class="icon-envelope-open" />Messages</a></li>
+
+                                <li><a href="javascript:void(0);"><i class="icon-settings" />Settings</a></li>
+
+                                <li class="divider" />
+
+                                <li><a href="page-login.html"><i class="icon-power" />Logout</a></li>
+                            </ul>
+                        </div>
+
+                        <hr />
+                    </div>
+                    <!-- Nav tabs -->
+                    <!-- <ul class="nav nav-tabs">
+    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#hr_menu">HR</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#project_menu">Project</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sub_menu"><i class="icon-grid"></i></a></li>                
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>
+</ul> -->
+                    <!-- Tab panes -->
+
+                    <div class="tab-content p-l-0 p-r-0">
+
+                        <div class="tab-pane animated fadeIn active" id="hr_menu">
+                            <nav class="sidebar-nav">
+
+                                <ul class="main-menu metismenu">
+
+                                   
+                                    
+                                    <li><a href="dashboard.xhtml"><i class="icon-speedometer" /><span>Dashboard</span></a></li>
+
+                                    <li class="active" ><a href="profile.xhtml"><i class="icon-user" /><span>Profile</span></a></li>
+
+                                    <li> <a href="students.xhtml"><i class="icon-diamond" />Students</a></li>
+
+                                    <li> <a href="request.xhtml"><i class="icon-bell" />Requests</a></li>
+
+                                    <li> <a href="interviews.xhtml"><i class="icon-users" />Interviews</a></li>
+                                </ul></nav></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content" class="profilepage_2 blog-page">
+
+            <div class="container-fluid">
+
+                <div class="block-header">
+
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+
+                            <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left" /></a> User Profile v2</h2>
+
+                            <ul class="breadcrumb">
+
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon-home" /></a></li>
+
+                                <li class="breadcrumb-item">Pages</li>
+
+                                <li class="breadcrumb-item active">User Profile v2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+
+                    <div class="card">
+                    <h:form enctype="multipart/form-data">
+
+                        <div class="header">
+
+                            <h2>Personal Information
+                                <h:commandButton id="submit" action="#{companyManagedBean.updateProfile()}" value="Update" style="float:right" class="btn btn-primary"/>
+                            </h2>
+                        </div>
+
+                        <div class="body">
+                            <small class="text-muted">Profile pic: </small>
+                            <input type="file" id="dropify-event" data-default-file="" />
+                            <small class="text-muted">Company name: </small>
+                            <h:inputText value="#{companyManagedBean.companyname}" class="form-control" disabled="true"/>
+                            
+                             <small class="text-muted">Owner name: </small>
+                             <h:inputText value="#{companyManagedBean.name}" class="form-control" disabled="true"/>
+                            
+                            <small class="text-muted">Company user name: </small>
+                            <h:inputText value="#{companyManagedBean.username}" class="form-control" disabled="true"/>
+                            <small class="text-muted">Company address: </small>
+                            <h:inputTextarea rows="5" value="#{companyManagedBean.address}" class="form-control"/>
+
+                            <hr />
+                            <small class="text-muted">Company email: </small>
+                            <h:inputText value="#{companyManagedBean.email}" class="form-control" disabled="true"/>
+
+                            <hr />
+                            <small class="text-muted">Mobile: </small>
+                            <h:inputText value="#{companyManagedBean.contact}" class="form-control" disabled="true"/>
+
+                         
+
+                            <hr />
+                            <small class="text-muted">Description: </small>
+                            <h:inputTextarea rows="5" value="#{companyManagedBean.description}" class="form-control"/>
+
+                            <hr />
+                            <small class="text-muted">Social: </small>
+
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-linkedin  m-r-5" /></span>
+                                <h:inputText value="#{companyManagedBean.linkedinLink}" class="form-control"/>
+                            </div>
+                            <!-- <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-github  m-r-5"></i></span>
+                                    <input type="text" class="form-control" required placeholder=" github.com/example">
+                            </div> -->
+
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-globe  m-r-5" /></span>
+                                <h:inputText value="#{companyManagedBean.websiteLink}" class="form-control"/>
+                            </div>
+                        </div>
+                    </h:form>
+                    </div>
+
+                    <div class="card">
+                        <h:form>
+                        <div class="header">
+
+                            <h2>Technologies</h2>
+                           <h:commandButton id="submit" action="#{companyManagedBean.saveTechnology()}" value="Save" class="btn btn-primary"/>
+
+                        </div>
+
+                            <div class="form-group">
+
+                                <div class="body" id="dynamic_form">
+<!--                                    <select id="tech" name="tech[]" class="multiselect multiselect-custom" multiple="multiple" data-parsley-required="" data-parsley-trigger-after-failure="change" data-parsley-errors-container="#error-multiselect">
+
+                                        <option value="cheese">Cheese</option>
+
+                                        <option value="tomatoes">Tomatoes</option>
+
+                                        <option value="mozarella">Mozzarella</option>
+
+                                        <option value="mushrooms">Mushrooms</option>
+
+                                        <option value="pepperoni">Pepperoni</option>
+
+                                        <option value="onions">Onions</option>
+                                    </select>-->
+
+                                    <h:selectManyCheckbox value = "#{companyManagedBean.userTechnologies}">
+                                        <c:forEach var="tech" items="#{companyManagedBean.allTechnology()}">
+                                            <f:selectItem itemValue = "#{tech.id}" itemLabel = "#{tech.name}" />
+                                        </c:forEach>
+                                    </h:selectManyCheckbox>
+                                </div>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: auto;">
+                    <button type="submit" class="btn btn-info">Update Profile</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Javascript -->
+
+        <script src="../assets/bundles/libscripts.bundle.js"></script>
+
+        <script src="../assets/bundles/vendorscripts.bundle.js"></script>
+
+        <script src="../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+
+        <script src="../assets/vendor/parsleyjs/js/parsley.min.js"></script>
+
+        <script src="../assets/js/dynamic-form.js"></script>
+
+        <script src="../assets/vendor/dropify/js/dropify.min.js"></script>
+
+        <script src="../assets/bundles/mainscripts.bundle.js"></script>
+
+        <script src="../assets/js/pages/forms/dropify.js"></script>
+
+        <script src="../assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob-->
+
+        <script src="../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="../assets/bundles/mainscripts.bundle.js"></script>
+        <!---DYNAMIC EDUCTIONAL DETAILS-->
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var maxField = 10; //Input fields increment limitation
+                var addButton = $('.add_button'); //Add button selector
+                var wrapper = $('.field_wrapper'); //Input field wrapper
+                var html = '';
+                html += '&lt;div class="forclose card"&gt;';
+                html += '&lt;div class="body" id="dynamic_form"&gt;';
+                html += '&lt;small class="text-muted"&gt;Degree: &lt;/small&gt;';
+                html += '&lt;input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1" id="dname" placeholder="Example-MscIT"&gt;';
+                html += '&lt;small class="text-muted"&gt;University-college name: &lt;/small&gt;';
+                html += '&lt;input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1" id="cname" placeholder="Example-jpdawer"&gt;';
+                html += '&lt;small class="text-muted"&gt;Year of passing: &lt;/small&gt;';
+                html += '&lt;select name="select" class="form-control" id="dropdownYear" style="width: 120px;"&gt;';
+                html += '&lt;/select&gt;';
+                html += '&lt;small class="text-muted"&gt;Percentage: &lt;/small&gt;';
+                html += '&lt;input type="number" class="form-control"  aria-label="name" aria-describedby="basic-addon1" id="per"&gt;';
+                html += '&lt;small class="text-muted"&gt;CGPI: &lt;/small&gt;';
+                html += '&lt;input type="number" class="form-control" min="1" max="10"   step="any" aria-label="name" aria-describedby="basic-addon1" id="cgpi" placeholder="Between 1 to 10"&gt;';
+                html += '&lt;a href="javascript:void(0);" class="remove_button" id="removebtn"&gt;&lt;button class="btn-danger"&gt;X&lt;/button&gt;&lt;/a&gt;&lt;/div&gt;';
+                html += '&lt;/div&gt;';
+                html += '&lt;/div&gt;';
+                var x = 1; //Initial field counter is 1
+                //Once add button is clicked
+                $(addButton).click(function () {
+                    //Check maximum number of input fields
+                    if (x &lt;
+                    maxField
+                    ) {
+                    x++; //Increment field counter
+                    $(wrapper).append(html); //Add field html
+                    }
+                });
+                //Once remove button is clicked
+                $(wrapper).on('click', '.remove_button', function (e) {
+                    e.preventDefault();
+                    $(this).parent('div').remove(); //Remove field html
+                    x--; //Decrement field counter
+                });
+            });
+        </script>
+        <!---DYNAMIC EXPERIENCE DETAILS-->
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var maxField = 10; //Input fields increment limitation
+                var addButton = $('.add_button2'); //Add button selector
+                var wrapper = $('.field_wrapper2'); //Input field wrapper
+                var html = '';
+                html += '&lt;div class="forclose2 card"&gt;';
+                html += '&lt;div class="body" id="dynamic_form"&gt;';
+                html += '&lt;small class="text-muted"&gt;Project title: &lt;/small&gt;'
+                html += '&lt;input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1" id="jtitle" placeholder="Example-web developer"&gt;'
+                html += '&lt;small class="text-muted"&gt;Description: &lt;/small&gt;'
+                html += '&lt;textarea class="form-control" rows="5" cols="30" required placeholder="project description"&gt;&lt;/textarea&gt;'
+                html += '&lt;br&gt;'
+                html += '&lt;a href="javascript:void(0);" class="remove_button2" id="removebtn2"&gt;&lt;button class="btn-danger"&gt;X&lt;/button&gt;&lt;/a&gt;&lt;/div&gt;';
+                html += '&lt;/div&gt;';
+                html += '&lt;/div&gt;';
+                var x = 1; //Initial field counter is 1
+                //Once add button is clicked
+                $(addButton).click(function () {
+                    //Check maximum number of input fields
+                    if (x &lt;
+                    maxField
+                    ) {
+                    x++; //Increment field counter
+                    $(wrapper).append(html); //Add field html
+                    }
+                });
+                //Once remove button is clicked
+                $(wrapper).on('click', '.remove_button2', function (e) {
+                    e.preventDefault();
+                    $(this).parent('div').remove(); //Remove field html
+                    x--; //Decrement field counter
+                });
+            });
+        </script>
+        <!---DYNAMIC PROJECT DETAILS-->
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var maxField = 10; //Input fields increment limitation
+                var addButton = $('.add_button1'); //Add button selector
+                var wrapper = $('.field_wrapper1'); //Input field wrapper
+                var html = '';
+                html += '&lt;div class="forclose1 card"&gt;';
+                html += '&lt;div class="body" id="dynamic_form"&gt;';
+                html += '&lt;small class="text-muted"&gt;Job title: &lt;/small&gt;';
+                html += '&lt;input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1" id="jtitle" placeholder="Example-web developer"&gt;';
+                html += '&lt;small class="text-muted"&gt;Company name: &lt;/small&gt;';
+                html += '&lt;input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1" id="companyName"&gt;';
+                html += '&lt;small class="text-muted"&gt;Start date: &lt;/small&gt;';
+                html += '&lt;input type="text" class="form-control" id="datepicker1"&gt;';
+                html += '&lt;small class="text-muted"&gt;End date: &lt;/small&gt;';
+                html += '&lt;input type="text" class="form-control" id="datepicker2"&gt;';
+                html += '&lt;input type="checkbox" name="checkbox" required data-parsley-errors-container="#error-checkbox" id="chkSelect"&gt;';
+                html += ' &lt;span&gt;Present&lt;/span&gt;';
+                html += '&lt;hr&gt;';
+                html += '&lt;small class="text-muted"&gt;Description: &lt;/small&gt;';
+                html += '&lt;textarea class="form-control" rows="5" cols="30" required placeholder="job description"&gt;&lt;/textarea&gt;';
+                html += '&lt;a href="javascript:void(0);" class="remove_button1" id="removebtn1"&gt;&lt;button class="btn-danger"&gt;X&lt;/button&gt;&lt;/a&gt;&lt;/div&gt;';
+                html += '&lt;/div&gt;';
+                html += '&lt;/div&gt;';
+                var x = 1; //Initial field counter is 1
+                //Once add button is clicked
+                $(addButton).click(function () {
+                    //Check maximum number of input fields
+                    if (x &lt;
+                    maxField
+                    ) {
+                    x++; //Increment field counter
+                    $(wrapper).append(html); //Add field html
+                    }
+                });
+                //Once remove button is clicked
+                $(wrapper).on('click', '.remove_button1', function (e) {
+                    e.preventDefault();
+                    $(this).parent('div').remove(); //Remove field html
+                    x--; //Decrement field counter
+                });
+            });
+        </script>
+
+        <script>
+            $(function () {
+                // validation needs name of the element
+                $('#tech').multiselect();
+                // initialize after multiselect
+                $('#basic-form').parsley();
+            });
+            $(function () {
+                $('#chkSelect').change(function () {
+                    var status = this.checked;
+                    if (status)
+                        $('#datepicker2').prop("disabled", true);
+                    else
+                        $('#datepicker2').prop("disabled", false);
+                })
+            })
+            $('#dropdownYear').each(function () {
+                var year = (new Date()).getFullYear();
+                var current = year;
+                year -= 4;
+                        for (var i = 0; i &lt; 6;
+                        i++
+                        ) {
+                if ((year + i) == current)
+                    $(this).append('&lt;option selected value="' + (year + i) + '"&gt;' + (year + i) + '&lt;/option&gt;');
+                else
+                    $(this).append('&lt;option value="' + (year + i) + '"&gt;' + (year + i) + '&lt;/option&gt;');
+                }
+            })
+            $(function () {
+                $("#datepicker").datepicker({
+                    numberOfMonths: 3,
+                    showButtonPanel: true
+                });
+            });
+            $(function () {
+                $("#datepicker1").datepicker({
+                    numberOfMonths: 3,
+                    showButtonPanel: true
+                });
+            });
+            $(function () {
+                $("#datepicker2").datepicker({
+                    numberOfMonths: 3,
+                    showButtonPanel: true
+                });
+            });
+            
+        </script>
+        <!-- Mirrored from wrraptheme.com/templates/lucid/hr/html/light/page-profile2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Apr 2021 12:10:03 GMT -->
+    </body>
+</html>
+
