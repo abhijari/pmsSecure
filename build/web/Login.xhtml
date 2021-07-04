@@ -1,34 +1,78 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-       
-    </h:head>
-    <h:body>
-        <div align="right">
-        <h:link value="Home Page" outcome="home" />
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+    <head>
+        <title>:: Lucid HR :: Login</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="description" content="Lucid Bootstrap 4x Admin Template" />
+        <meta name="author" content="WrapTheme, design by: ThemeMakker.com" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" /><!-- VENDOR CSS -->
+        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css" />
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/color_skins.css" /></head>
+
+    <body class="theme-orange">
+        <!-- WRAPPER -->
+
+        <div id="wrapper">
+
+            <div class="vertical-align-wrap">
+
+                <div class="vertical-align-middle auth-main">
+
+                    <div class="auth-box">
+
+                        <div class="top">
+                            <img src="https://wrraptheme.com/templates/lucid/hr/html/assets/images/logo-white.svg" alt="Lucid" />
+                        </div>
+
+                        <div class="card">
+
+                            <div class="header">
+
+                                <p class="lead">Login to your account</p>
+                            </div>
+
+                            <div class="body">
+                                <h:form class="form-auth-small" >
+
+                                               <h:outputText id="msg" style="color:red" value="#{loginBean.message}"/> 
+
+                                    <div class="form-group">
+                                        <label for="signin-email" class="control-label sr-only">Email</label>
+                                         <h:inputText id="user" value="#{loginBean.username}" class="form-control" a:placeholder="Username"/>      
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="signin-password" class="control-label sr-only">Password</label>
+                                     <h:inputSecret id="pass" value="#{loginBean.password}" class="form-control" a:placeholder="Password"/>      
+                                    </div>
+
+                                                    <h:commandButton id="sub" value="Submit" action="#{loginBean.login()}" class="btn btn-primary btn-lg btn-block"/>
+
+
+
+                                    <div class="bottom">
+                                        <span>Don't have an account? <a href="signup.xhtml">Register</a></span>
+                                    </div>
+                                </h:form>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h:form>
-            <h:panelGrid columns="2">
-                <h:outputLabel for="user" id="lbluser" value="User Name :"/>
-                <h:inputText id="user" value="#{loginBean.username}"/>      
-                  <h:outputLabel for="pass" id="lblpass" value="Password :"/>
-                  <h:inputSecret id="pass" value="#{loginBean.password}"/>      
-                  <h:commandButton id="sub" value="Submit" action="#{loginBean.login()}"/>
-                <h:commandButton id="res" value="Reset"/>
-                
-                
-                
-            </h:panelGrid>
-            <br/>
-           <h:outputText id="msg" style="color:red" value="#{loginBean.message}"/> 
-            
-        </h:form>
-        
-        
-        
-    </h:body>
+        <!-- END WRAPPER -->
+        <!-- Mirrored from wrraptheme.com/templates/lucid/hr/html/light/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Apr 2021 12:10:01 GMT -->
+    </body>
 </html>
 

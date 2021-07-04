@@ -23,6 +23,8 @@ import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.SelectEvent;
 /**
@@ -40,6 +42,11 @@ public class AdminManagedBean implements Serializable{
     private Date Intdate;
     String Description,Location;
 
+    
+      HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
+      
+    
     public String getDescription() {
         return Description;
     }
@@ -124,6 +131,9 @@ public class AdminManagedBean implements Serializable{
  }
        
        public List<Interview> AllInterviews(){
+           
+           int ss = (int) request.getSession().getAttribute("UserId");
+           System.out.println("iddddddddd"+ss);
            return this.adminSessionBean.allInterviews();
        }
        

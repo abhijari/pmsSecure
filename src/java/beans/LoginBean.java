@@ -179,11 +179,12 @@ import javax.servlet.http.HttpServletResponse;
        System.out.println("In Log out");
           HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
           request.getSession().setAttribute("logged-group", "");
+            request.getSession().setAttribute("userId", "");
            request.logout();
           request.getSession().invalidate();
          
           
-          return "/Login.jsf";
+          return "Login.xhtml";
              
              }
     

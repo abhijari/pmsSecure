@@ -17,7 +17,10 @@ import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 /**
@@ -33,6 +36,9 @@ public class StudentManagedBean {
 
     String name,username,address,email,websiteLink,gitLink,linkedinLink,gender,description,contact,dob,companyname;
 
+      HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
+      
     public String getCompanyname() {
         return companyname;
     }
@@ -70,7 +76,7 @@ public class StudentManagedBean {
     public void saveTechnology(){
         System.out.println(this.userTechnologies.size());
         if(this.userTechnologies.size()>0){
-            this.studentSessionBean.addTechnology(4, userTechnologies);
+            this.studentSessionBean.addTechnology(getId(), userTechnologies);
         }
         
     }
@@ -81,7 +87,7 @@ public class StudentManagedBean {
     
     public void allUserTechnology(){ 
         List<Userstechnology> utech;
-        utech = this.studentSessionBean.getUserTechnology(4);
+        utech = this.studentSessionBean.getUserTechnology(getId());
         utech.forEach((action)->userTechnologies.add(action.getTechnologyId().getId()));
     }
     
@@ -409,7 +415,7 @@ public class StudentManagedBean {
         return this.studentSessionBean.getAlltechnology();
     }
     private void getProfile(){
-        user = this.studentSessionBean.getUserDeatil(4);
+        user = this.studentSessionBean.getUserDeatil(getId());
         this.name = user.getName();
         this.username = user.getUsername();
         this.address = user.getAddress();
@@ -447,7 +453,7 @@ public class StudentManagedBean {
             eduDetail.setYear(year);
             eduDetail.setPercentage(percentage);
             eduDetail.setCgpa(cgpa);
-            this.studentSessionBean.addEducationDetail(4, eduDetail);
+            this.studentSessionBean.addEducationDetail(getId(), eduDetail);
         }
         else{
             Educationdetail eduDetail = new Educationdetail();
@@ -471,7 +477,7 @@ public class StudentManagedBean {
         this.eduttl=this.edubtn="Add";
     }
     public List<Educationdetail> getEducationDetail(){
-        return this.studentSessionBean.getAllEducationDetail(4);
+        return this.studentSessionBean.getAllEducationDetail(getId());
     }
     
     public void deleteEducationdetail(int eduId){
@@ -505,7 +511,7 @@ public class StudentManagedBean {
                     expDetail.setIsCurrentJob(isCurrentJob);
                     expDetail.setJoinedDate(new Date());
                     expDetail.setLeavingDate(new Date());
-                    this.studentSessionBean.addExperienceDetail(4, expDetail);  
+                    this.studentSessionBean.addExperienceDetail(getId(), expDetail);  
         }
         else{
             Experiencedetail expDetail = new Experiencedetail();
@@ -533,7 +539,7 @@ public class StudentManagedBean {
         this.expttl=this.expbtn="Add";
     }
     public List<Experiencedetail> getExperience(){
-        return this.studentSessionBean.getAllExperienceDetail(4);
+        return this.studentSessionBean.getAllExperienceDetail(getId());
     }
     
     public void deleteExperiencedetail(int expId){
@@ -566,7 +572,7 @@ public class StudentManagedBean {
                     Projects proDetail= new Projects();
                     proDetail.setTitle(this.proTitle);        
                     proDetail.setDescription(this.proDescription);
-                    this.studentSessionBean.addProjectDetail(4,proDetail);
+                    this.studentSessionBean.addProjectDetail(getId(),proDetail);
         }
         else{
             Projects proDetail= new Projects();
@@ -580,7 +586,7 @@ public class StudentManagedBean {
         this.prottl=this.probtn="Add";
     }
     public List<Projects> getProjects(){
-        return this.studentSessionBean.getAllProjects(4);
+        return this.studentSessionBean.getAllProjects(getId());
     }
     
     public void deleteProjects(int proId){
@@ -597,7 +603,7 @@ public class StudentManagedBean {
     }
     
      public List<Jobinerviews> allInterview(){
-        return this.studentSessionBean.getAllInerviews(4);
+        return this.studentSessionBean.getAllInerviews(getId());
      }  
      
      public void updateStatus(int jobintId,int status){
@@ -642,5 +648,9 @@ public class StudentManagedBean {
         
     }
     
+     public int getId(){
+          int ss = (int) request.getSession().getAttribute("UserId");
+          return ss;
+    }
     
 }

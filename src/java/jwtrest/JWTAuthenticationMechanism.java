@@ -60,17 +60,23 @@ public class JWTAuthenticationMechanism implements HttpAuthenticationMechanism ,
         if((request.getSession().getAttribute("logged-group")==null) && (request.getRequestURI().contains("/admins/") || request.getRequestURI().contains("/users/")))
             {
                 System.out.println("In Phase Listener - blank group");
-               request.getServletContext().getRequestDispatcher("/home.xhtml").forward(request, response);
+               request.getServletContext().getRequestDispatcher("/Login.xhtml").forward(request, response);
 
             }
             else{
-         		 if((request.getRequestURI().contains("/admins/") && !request.getSession().getAttribute("logged-group").equals("Admin")))
+         		 if((request.getRequestURI().contains("/Admin/") && !request.getSession().getAttribute("logged-group").equals("Admin")))
           		{
                	// response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "You are Not Authorised to view this Page . Go Back To Login");
                         request.getServletContext().getRequestDispatcher("/Unauthorised.xhtml").forward(request, response);
           		}   
           
-         		 else if((request.getRequestURI().contains("/users/") && !request.getSession().getAttribute("logged-group").equals("Company")))
+         		 else if((request.getRequestURI().contains("/Company/") && !request.getSession().getAttribute("logged-group").equals("Company")))
+         		 {
+               // response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "You are Not Authorised to view this Page . Go Back To Login");
+                      request.getServletContext().getRequestDispatcher("/Unauthorised.xhtml").forward(request, response);
+          	
+          		} 
+                          else if((request.getRequestURI().contains("/Student/") && !request.getSession().getAttribute("logged-group").equals("Student")))
          		 {
                // response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "You are Not Authorised to view this Page . Go Back To Login");
                       request.getServletContext().getRequestDispatcher("/Unauthorised.xhtml").forward(request, response);

@@ -3,63 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/User.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/UserSessionBeanLocal.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/users/UserPage.xhtml</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Jobinerviews.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/LoginBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/City.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Experiencedetail.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/AdminSessionBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Company.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/AdminManagedBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/home.xhtml</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/UserSessionBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/config/ProjectConfig.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/CompanySessionBeanLocal.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Groups.java</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/jwtrest/JWTAuthenticationMechanism.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/BookCDIBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Technology.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Userstechnology.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/jwtrest/TokenProvider.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Skills.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Student/companyDetail.xhtml</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/State.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/jwtrest/JWTCredential.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Mobile.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/client/RestFilter.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Usersgroup.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/jwtrest/Constants.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/StudentSessionBeanLocal.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/UserManagedBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Interview.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Error.xhtml</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Catagory.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/BookMaster_1.java</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Unauthorised.xhtml</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/LoginBean.java</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/StudentManagedBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/DataSessionBean.java</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/WEB-INF/web.xml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/conf/persistence.xml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/CompanyManagedBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/DataSessionBeanLocal.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/client/BookRestClient.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Projects.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Educationdetail.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/rest/ApplicationConfig.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/WEB-INF/beans.xml</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/StudentSessionBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/admins/AdminPage.xhtml</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/CatagorySessionBeanLocal.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/rest/BookResource.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/WEB-INF/faces-config.xml</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/BookMaster.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/AdminSessionBeanLocal.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Unauthorised.xhtml</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/Requestinterviewdates.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/WEB-INF/web.xml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/web/Login.xhtml</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/CompanySessionBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/CatagorySessionBean.java</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/AdminManagedBean.java</file>
         </group>
     </open-files>
 </project-private>

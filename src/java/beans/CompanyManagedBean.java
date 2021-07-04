@@ -13,6 +13,9 @@ import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
@@ -27,6 +30,9 @@ public class CompanyManagedBean {
     User user = new User();
     User stud = new User();
 
+     HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
+      
     public User getStud() {
         return stud;
     }
@@ -141,19 +147,20 @@ public class CompanyManagedBean {
     public void saveTechnology(){
         System.out.println(this.userTechnologies.size());
         if(this.userTechnologies.size()>0){
-            this.companySessionBean.addTechnology(6, userTechnologies);
+            
+            this.companySessionBean.addTechnology(getId(), userTechnologies);
         }
         
     }
     
     public void allUserTechnology(){ 
         List<Userstechnology> utech;
-        utech = this.companySessionBean.getUserTechnology(6);
+        utech = this.companySessionBean.getUserTechnology(getId());
         utech.forEach((action)->userTechnologies.add(action.getTechnologyId().getId()));
     }
     
      private void getProfile(){
-        user = this.companySessionBean.getUserDeatil(6);
+        user = this.companySessionBean.getUserDeatil(getId());
         this.name = user.getName();
         this.companyname = user.getCompanyname();
         this.username = user.getUsername();
@@ -204,7 +211,12 @@ public class CompanyManagedBean {
     }
     
     public List<Interview> allInterviews(){
-        return this.companySessionBean.getAllInerviews(6);
+        return this.companySessionBean.getAllInerviews(getId());
+    }
+    
+    public int getId(){
+          int ss = (int) request.getSession().getAttribute("UserId");
+          return ss;
     }
     
     @PostConstruct
