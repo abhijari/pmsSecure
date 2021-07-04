@@ -593,12 +593,13 @@
 
                                 <h2>Students List</h2>
 
+                
                                 <ul class="header-dropdown">
 
-                                    <li><a href="javascript:void(0);" class="btn btn-info" data-toggle="modal" data-target="#addcontact">Add New</a></li>
+                                    <li><a href="addStudent.xhtml" class="btn btn-info" >Add New</a></li>
                                 </ul>
                             </div>
-
+                            <h:form>
                             <div class="body">
 
                                 
@@ -660,8 +661,10 @@
 
 
                                                 <td>
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit" /></button>
-                                                    <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o" /></button>
+                                                    <h:commandButton  class="btn btn-sm btn-outline-secondary js-sweetalert" action="#{adminManagedBean.EditStudent(student.userId.id)  }" value="Edit"/>
+                                                        
+                                                    <h:commandButton  class="btn btn-sm btn-outline-danger js-sweetalert" action="#{adminManagedBean.deleteStudentIn(student.userId.id)}" value="Delete"/>
+                                                        
                                                 </td>
                                             </tr>
                                                 
@@ -672,6 +675,7 @@
                                     </table>
                                 </div>
                             </div>
+                            </h:form>
                         </div>
                     </div>
                 </div>

@@ -58,12 +58,12 @@ import javax.xml.bind.annotation.XmlTransient;
 public class User implements Serializable {
 
     @Basic(optional = false)
-    @NotNull
+    //@NotNull
     @Size(min = 1, max = 100)
     @Column(name = "name")
     private String name;
     @Basic(optional = false)
-    @NotNull()
+    //@NotNull()
     @Size(min = 1, max = 25)
     @Column(name = "username")
     private String username;
@@ -79,7 +79,7 @@ public class User implements Serializable {
     private String image;
     @Basic(optional = false)
     //@NotNull
-    @NotNull()
+    //@NotNull()
     @Size(min = 1, max = 100)
     @Column(name = "address")
     private String address;
@@ -87,7 +87,7 @@ public class User implements Serializable {
     // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
     // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
     @Basic(optional = false)
-    @NotNull()
+    //@NotNull()
     @Size(min = 1, max = 100)
     @Column(name = "email")
     private String email;

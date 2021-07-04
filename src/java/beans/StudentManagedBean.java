@@ -422,7 +422,7 @@ public class StudentManagedBean {
         this.email = user.getEmail();
         this.contact = user.getContact();
         this.gender = user.getGender();
-        this.dob = user.getDob().toString();
+        this.dob = user.getDob() == null ? "" : user.getDob().toString();
         this.description = user.getDescription();
         this.linkedinLink = user.getLinkedinLink();
         this.gitLink = user.getGitLink();

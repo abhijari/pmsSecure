@@ -218,7 +218,7 @@ public class UserManagedBean implements Serializable{
 //        System.out.println("name="+u.getContact());
 //        System.out.println("name="+u.getDescription());
         
-      //  this.sendmail();
+        this.sendmail();
         this.stateId=0;
         
     }
@@ -227,7 +227,7 @@ public class UserManagedBean implements Serializable{
         
          String to = this.email;//change accordingly  
       String from = "dfordevil11@gmail.com";//change accordingly  
-      String pass = "abhijari13";//or IP address  
+      String pass = "Devil@1111";//or IP address  
       
        Properties props = System.getProperties();
         String host = "smtp.gmail.com";

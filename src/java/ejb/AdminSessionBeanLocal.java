@@ -36,5 +36,5 @@ public interface AdminSessionBeanLocal {
     public List<Interview> allInterviews();
     public void addInterview(int userId,Interview data);
     public List<Integer> getInterviewUsers(int UserID);
-
+    public User getStudentDeatil(int userId);
 }

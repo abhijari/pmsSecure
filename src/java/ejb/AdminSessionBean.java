@@ -7,6 +7,7 @@ package ejb;
 
 import entity.Educationdetail;
 import entity.Experiencedetail;
+import entity.Groups;
 import entity.Interview;
 import entity.Jobinerviews;
 import entity.Projects;
@@ -54,17 +55,38 @@ public class AdminSessionBean implements AdminSessionBeanLocal {
 
     @Override
     public void addStudent(User data) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        User userObj=new User();
+        userObj.setUsername(data.getUsername());
+        userObj.setName(data.getName());
+        userObj.setEmail(data.getEmail());
+        userObj.setContact(data.getContact());
+        userObj.setGender(data.getGender());
+      //  userObj.setDob(data.getDob());
+       userObj.setPassword(data.getPassword());
+        em.persist(userObj);
+        em.flush();
+        int userId=userObj.getId();
+         Usersgroup ug = new Usersgroup();
+        ug.setUserId(new User(userId));
+        ug.setGroupId(new Groups(2));
+        em.persist(ug);
     }
 
     @Override
     public void updateStudent(int userId, User data) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        User u = em.find(User.class, userId);
+        u.setName(data.getName());
+        u.setUsername(data.getUsername());
+        u.setEmail(data.getEmail());
+        u.setContact(data.getContact());
+        u.setGender(data.getGender());
+        em.merge(u);
     }
 
     @Override
     public void deleteStudent(int userId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       User userObj=em.find(User.class, userId);
+       em.remove(userObj);
     }
 
     @Override
@@ -104,7 +126,8 @@ public class AdminSessionBean implements AdminSessionBeanLocal {
 
     @Override
     public void deleteDelete(int userId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       User userObj=em.find(User.class, userId);
+       em.remove(userObj);
     }
 
     @Override
@@ -171,5 +194,10 @@ public class AdminSessionBean implements AdminSessionBeanLocal {
     @Override
     public List<Interview> allInterviews() {
         return em.createNamedQuery("Interview.findAll").getResultList();
+    }
+    
+    @Override
+    public User getStudentDeatil(int userId) {
+        return (User)em.createNamedQuery("User.findById").setParameter("id",userId).getSingleResult();
     }
 }

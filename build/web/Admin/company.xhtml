@@ -598,7 +598,7 @@
                                     <li><a href="javascript:void(0);" class="btn btn-info" data-toggle="modal" data-target="#addcontact">Add New</a></li>
                                 </ul>
                             </div>
-
+                            <h:form>
                             <div class="body">
 
                                 <div class="table-responsive">
@@ -662,9 +662,8 @@
 
 
                                                 <td>
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit" /></button>
-                                                    <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o" /></button>
-                                                </td>
+                                                    <h:commandButton  class="btn btn-sm btn-outline-danger js-sweetalert" action="#{adminManagedBean.deleteCompany(company.userId.id)}" value="Delete"/>
+ </td>
                                             </tr>
                                                 
                                                 
@@ -673,6 +672,7 @@
                                     </table>
                                 </div>
                             </div>
+                            </h:form>
                         </div>
                     </div>
                 </div>
