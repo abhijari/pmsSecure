@@ -273,6 +273,13 @@
 <h:outputText value="#{adminManagedBean.intdate}">  
 <f:convertDateTime locale="en" timeStyle="short" type="both" dateStyle="full"/>  
 </h:outputText>  
+                                    
+                                      <small class="text-muted">description: </small>
+
+                                    <h:inputTextarea value="#{adminManagedBean.description}" class="form-control"/>
+                                         <small class="text-muted">Location: </small>
+
+                                         <h:inputTextarea value="#{adminManagedBean.location}" class="form-control"/>
                      <h:commandButton id="submit" action="#{adminManagedBean.addInterview()}" value="Add" class="btn btn-primary"/>
 
                                 </h:form>

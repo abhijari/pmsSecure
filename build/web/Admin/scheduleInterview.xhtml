@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
 
         <title>:: Lucid HR :: Table Basic</title>
@@ -225,10 +226,10 @@
 
                             <div class="header">
 
-                                <h2>Basic Example 8
+                                <h2>Interview List
                                     <td>
                                         <h:form>
-                                    <h:commandLink class="btn btn-primary btn-sm" style="float:right" value = "+ Request Interview Date" action = "addInterview" /> 
+                                    <h:commandLink class="btn btn-primary btn-sm" style="float:right" value = "+ Add Interview" action = "addInterview" /> 
                                         </h:form>
 </td>
 
@@ -266,7 +267,11 @@
 
                                                 <td>#{in.companyId.companyname}</td>
 
-                                                <td>#{in.date}</td>
+                                                 <td>
+                                                 <h:outputText value="#{in.date}" >
+                                                        <f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+                                                    </h:outputText>
+                                                </td>
 
                                                 <c:forEach var="s" items="#{companyManagedBean.interviewStatus(in.id)}">
                                                 <td>#{s}</td>

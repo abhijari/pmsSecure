@@ -278,10 +278,15 @@ public class AdminManagedBean implements Serializable{
                 iv.setDate(Intdate);
                 iv.setDescription("dd");
                 iv.setLocation("def");
-                this.adminSessionBean.addInterview(companyId, iv);
+                List<String> studentEmailList = this.adminSessionBean.addInterview(companyId, iv);
                 
-                
+                User user = this.adminSessionBean.getStudentDeatil(this.companyId);
+                String company = user.getCompanyname();
+                System.out.println("yoyo"+ studentEmailList);
 
+                for (String i : studentEmailList){
+                    this.sendInterviewmail(i,company,this.Intdate.toString());
+                }
  }
        
        public List<Interview> AllInterviews(){
@@ -364,6 +369,48 @@ public class AdminManagedBean implements Serializable{
             message.addRecipient(Message.RecipientType.TO, toAddress);
             message.setSubject("pms");
             message.setText("You Placement Management Website Password is "+Password);
+            Transport transport = session.getTransport("smtp");
+            transport.connect(host, from, pass);
+            transport.sendMessage(message, message.getAllRecipients());
+            transport.close();
+        }
+        catch (AddressException ae) {
+            ae.printStackTrace();
+        }
+        catch (MessagingException me) {
+            me.printStackTrace();
+        }
+    }
+     
+     
+     
+      public void sendInterviewmail(String email,String company,String date){
+        
+         String to = email;//change accordingly  
+      String from = "dfordevil11@gmail.com";//change accordingly  
+      String pass = "Devil@1111";//or IP address  
+      
+       Properties props = System.getProperties();
+        String host = "smtp.gmail.com";
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", host);
+        props.put("mail.smtp.user", from);
+        props.put("mail.smtp.password", pass);
+        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.auth", "true");
+       
+      Session session = Session.getDefaultInstance(props);
+        MimeMessage message = new MimeMessage(session);
+        
+        
+        try {
+            message.setFrom(new InternetAddress(from));
+            InternetAddress toAddress = new InternetAddress();
+            // To get the array of addresses
+            toAddress = new InternetAddress(to);
+            message.addRecipient(Message.RecipientType.TO, toAddress);
+            message.setSubject("pms");
+            message.setText(company+" would like to invite you to attend an interview on "+date+". for more information check website...");
             Transport transport = session.getTransport("smtp");
             transport.connect(host, from, pass);
             transport.sendMessage(message, message.getAllRecipients());

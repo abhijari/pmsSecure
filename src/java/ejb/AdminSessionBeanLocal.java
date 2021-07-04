@@ -34,7 +34,7 @@ public interface AdminSessionBeanLocal {
     public void updateRequest(int userId,boolean isVerified);
     
     public List<Interview> allInterviews();
-    public void addInterview(int userId,Interview data);
+    public List<String> addInterview(int userId,Interview data);
     public List<Integer> getInterviewUsers(int UserID);
     public User getStudentDeatil(int userId);
 }

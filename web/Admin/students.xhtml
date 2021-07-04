@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
         <title>:: Lucid HR :: Home</title>
         <meta charset="utf-8" />
@@ -625,7 +626,7 @@
 
                                                 <th>Year</th>
 
-                                                <th>Placed</th>
+<!--                                                <th>Placed</th>-->
 
                                                 <th>Action</th>
                                             </tr>
@@ -655,9 +656,13 @@
 
                                                 <td><span>#{student.userId.contact}</span></td>
 
-                                                 <td>#{student.userId.createdDate}</td>
+                                                 <td>
+                                                 <h:outputText value="#{student.userId.createdDate}" >
+                                                        <f:convertDateTime type="date" pattern="yyyy" />
+                                                    </h:outputText>
+                                                </td>
 
-                                                <td>#{student.userId.isPlaced}</td>
+<!--                                                <td>#{student.userId.isPlaced}</td>-->
 
 
                                                 <td>

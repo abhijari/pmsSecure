@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
         <head>
         <title>:: Lucid HR :: Home</title>
         <meta charset="utf-8" />
@@ -593,10 +594,7 @@
 
                                 <h2>Comapny List</h2>
 
-                                <ul class="header-dropdown">
-
-                                    <li><a href="javascript:void(0);" class="btn btn-info" data-toggle="modal" data-target="#addcontact">Add New</a></li>
-                                </ul>
+                               
                             </div>
                             <h:form>
                             <div class="body">
@@ -656,7 +654,12 @@
 
                                                  <td>#{company.userId.websiteLink}</td>
                                                  
-                                                 <td>#{company.userId.createdDate}</td>
+                                                 
+                                                  <td>
+                                                 <h:outputText value="#{company.userId.createdDate}" >
+                                                        <f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+                                                    </h:outputText>
+                                                </td>
 
                                                
 

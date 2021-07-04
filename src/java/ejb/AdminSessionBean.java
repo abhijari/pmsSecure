@@ -14,6 +14,7 @@ import entity.Projects;
 import entity.User;
 import entity.Usersgroup;
 import entity.Userstechnology;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -131,7 +132,7 @@ public class AdminSessionBean implements AdminSessionBeanLocal {
     }
 
     @Override
-    public void addInterview(int userId, Interview data) {
+    public List<String> addInterview(int userId, Interview data) {
                 
         
         
@@ -155,6 +156,7 @@ public class AdminSessionBean implements AdminSessionBeanLocal {
                 List<Integer> studeList;
                 studeList = this.getInterviewUsers(userId);
                 
+                List<String> emailList = new ArrayList<String>();
                 for (Integer i : studeList){
                     System.out.print(i + " ");
                     Jobinerviews jis = new Jobinerviews();
@@ -167,9 +169,14 @@ public class AdminSessionBean implements AdminSessionBeanLocal {
                     em.persist(jis);
                 }
                 
+                for (Integer i : studeList){
+                    User u = this.getStudentDeatil(i);
+                    emailList.add(u.getEmail());
+                }
+                
                 //to company
 //                ji.setStudentId(new User(userId));
-                
+               return emailList;
        
     }
     
