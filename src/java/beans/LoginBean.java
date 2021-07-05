@@ -139,10 +139,17 @@ import javax.servlet.http.HttpServletResponse;
            {
                System.out.println("In supervisor");
                   User u = this.userSessionBean.getSession(username);
-               System.out.println("In idddddddddddddd"+u.getId());
-               request.getSession().setAttribute("UserId", u.getId());
-               request.getSession().setAttribute("logged-group", "Company");
-               return "/Company/dashboard.xhtml?faces-redirect=true";
+                  if(u.getIsVerified() == true){
+                      System.out.println("In idddddddddddddd"+u.getId());
+                        request.getSession().setAttribute("UserId", u.getId());
+                        request.getSession().setAttribute("logged-group", "Company");
+                        return "/Company/dashboard.xhtml?faces-redirect=true";
+                  }
+                  else{
+                       message = "you can login after admin verfiy your account !!!";
+                        
+                  }
+               
            }
           else if(roles.contains("Student"))
            {
@@ -164,7 +171,7 @@ import javax.servlet.http.HttpServletResponse;
            //   e.printStackTrace();
         }
 //        
-      return "/Login.jsf";
+      return "/Login.xhtml";
     }
    
    private static void addError(FacesContext context, String message) {

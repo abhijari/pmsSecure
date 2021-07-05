@@ -4,8 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/entity/User.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/jwtrest/JWTAuthenticationMechanism.java</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Company/students.xhtml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/LoginBean.java</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Company/interviews.xhtml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/StudentManagedBean.java</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/conf/persistence.xml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/CompanyManagedBean.java</file>
@@ -13,14 +14,23 @@
             <file>file:/E:/java/ict1-main/JSFSecureApp/web/Admin/scheduleInterview.xhtml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/AdminSessionBean.java</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/AdminManagedBean.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/AdminSessionBeanLocal.java</file>
-            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Unauthorised.xhtml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/web/Admin/company.xhtml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/web/Admin/editStudent.xhtml</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/CompanySessionBeanLocal.java</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Admin/addInterview.xhtml</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/jwtrest/JWTAuthenticationMechanism.java</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Company/studentDetail.xhtml</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Student/profile.xhtml</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Student/interview.xhtml</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Student/companyDetail.xhtml</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/AdminSessionBeanLocal.java</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Unauthorised.xhtml</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/web/Admin/companyRequest.xhtml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/web/WEB-INF/web.xml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/web/Login.xhtml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/web/Admin/addStudent.xhtml</file>
             <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/beans/UserManagedBean.java</file>
+            <file>file:/E:/java/ict1-main/JSFSecureApp/src/java/ejb/CompanySessionBean.java</file>
         </group>
     </open-files>
 </project-private>

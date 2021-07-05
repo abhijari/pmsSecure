@@ -276,8 +276,8 @@ public class AdminManagedBean implements Serializable{
                 
                 Interview iv = new Interview();
                 iv.setDate(Intdate);
-                iv.setDescription("dd");
-                iv.setLocation("def");
+                iv.setDescription(Description);
+                iv.setLocation(Location);
                 List<String> studentEmailList = this.adminSessionBean.addInterview(companyId, iv);
                 
                 User user = this.adminSessionBean.getStudentDeatil(this.companyId);
@@ -368,7 +368,7 @@ public class AdminManagedBean implements Serializable{
             toAddress = new InternetAddress(to);
             message.addRecipient(Message.RecipientType.TO, toAddress);
             message.setSubject("pms");
-            message.setText("You Placement Management Website Password is "+Password);
+            message.setText("You Placement Management Website Username = "+ username +" and Password = "+Password);
             Transport transport = session.getTransport("smtp");
             transport.connect(host, from, pass);
             transport.sendMessage(message, message.getAllRecipients());
